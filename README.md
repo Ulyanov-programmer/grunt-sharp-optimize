@@ -109,11 +109,9 @@ sharp: {
 Type: `object`<br>
 An object that allows you to convert `all` images into images of a `specific type`.
 <br>
-Also optimizes and transmits the original.
-<br>
 
 ```js
-// example, all images will be converted to avif.
+// example, all images will be converted to .avif
 avif: {
   param: value,
 },
