@@ -2,13 +2,47 @@
   "name": "grunt-sharp-optimize",
   "version": "1.0.0",
   "description": "Compression and conversion of images for grunt using sharp.",
-  "main": "index.js",
-  "engines": {
-    "node": ">=0.10.0"
-  },
+  "main": "tasks/index.js",
   "author": {
     "name": "Ulyanov Ivan",
     "url": "https://github.com/Ulyanov-programmer"
   },
-  "license": "UNLICENSED"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ulyanov-programmer/grunt-sharp-optimize"
+  },
+  "bugs": {
+    "url": "https://github.com/Ulyanov-programmer/grunt-sharp-optimize/issues"
+  },
+  "homepage": "https://github.com/Ulyanov-programmer/grunt-sharp-optimize",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "files": [
+    "tasks"
+  ],
+  "keywords": [
+    "grunt",
+    "sharp",
+    "images",
+    "image",
+    "compress",
+    "converter",
+    "convert",
+    "png",
+    "jpg",
+    "jpeg",
+    "webp",
+    "gif",
+    "tiff",
+    "heif",
+    "avif"
+  ],
+  "dependencies": {
+    "sharp": "^0.33.2",
+    "glob-parent": "^6.0.2",
+    "fs-extra": "^11.2.0",
+    "chalk": "^5.3.0"
+  }
 }
