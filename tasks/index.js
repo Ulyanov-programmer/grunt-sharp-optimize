@@ -3,8 +3,7 @@
 const sharp = require('sharp'),
   globParent = require('glob-parent'),
   fs = require('fs-extra'),
-  path = require('path'),
-  chalk = require('chalk').default
+  path = require('path')
 
 const
   ALLOWED_EXTENSIONS = [
@@ -27,6 +26,7 @@ const
   }
 
 let logLevel, sharpOptions, destCwd, sourceCwd
+var chalk
 
 module.exports = function (grunt) {
   grunt.task.registerMultiTask('sharp', 'Convert and optimize images with Sharp.',
@@ -34,6 +34,8 @@ module.exports = function (grunt) {
       let
         done = this.async(),
         options = this.options()
+
+      chalk = await getChalkModule()
 
       logLevel = options.logLevel ?? 'small'
       sharpOptions = options.sharpOptions ?? {}
@@ -166,4 +168,13 @@ function extnamesIsCorrect(...extnames) {
   }
 
   return true
+}
+
+async function getChalkModule() {
+  if (!chalk) {
+    return (await import('chalk')).default
+  }
+  else {
+    return chalk
+  }
 }
