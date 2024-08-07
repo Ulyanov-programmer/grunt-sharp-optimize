@@ -1,6 +1,6 @@
 {
   "name": "grunt-sharp-optimize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compression and conversion of images for grunt using sharp.",
   "main": "tasks/index.js",
   "author": {
